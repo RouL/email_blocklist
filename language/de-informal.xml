@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<language xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/language.xsd" languagecode="de-informal">
+	<!-- ACP -->
+	<category name="wcf.acp.option">
+		<item name="wcf.acp.option.module_user_email_blacklist"><![CDATA[E-Mail Blockliste]]></item>
+		<item name="wcf.acp.option.module_user_email_blacklist.description"><![CDATA[Ermöglicht das blockieren von E-Mail Suffixen]]></item>
+
+		<item name="wcf.acp.option.blocked_email_suffixes"><![CDATA[Verbotene E-Mail Suffixe]]></item>
+		<item name="wcf.acp.option.blocked_email_suffixes.description"><![CDATA[Pro Zeile ein zu sperrender E-Mail Suffix.<br>
+			Beispiele:<br>.ru<br>.cn<br>@trashmail.net]]></item>
+	</category>
+</language>
