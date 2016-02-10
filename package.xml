@@ -4,8 +4,8 @@
 		<packagename>E-Mail Blocklist</packagename>
 		<packagedescription></packagedescription>
 		<isunique>1</isunique>
-		<version>1.0.0</version>
-		<date>2016-02-09</date>
+		<version>1.0.1</version>
+		<date>2016-02-10</date>
 		<plugin>com.woltlab.wcf.form.user</plugin>
 	</packageinformation>
 
@@ -30,5 +30,10 @@
 		<!-- languages -->
 		<languages languagecode="de-informal">language/de-informal.xml</languages>
 		<languages languagecode="de">language/de.xml</languages>
+	</instructions>
+
+	<instructions type="update" fromversion="1.0.0">
+		<files>files.tar</files>
+		<eventlistener>eventlistener_1.0.0_1.0.1.xml</eventlistener>
 	</instructions>
 </package>
