@@ -1,6 +1,7 @@
 <?php
 // wcf imports
 require_once(WCF_DIR.'lib/system/event/EventListener.class.php');
+require_once(WCF_DIR.'lib/util/StringUtil.class.php');
 
 /**
  * Blocks forbidden email suffixes
@@ -20,7 +21,9 @@ class EMailBlocklistListener implements EventListener {
 	public function __construct() {
 		if (MODULE_USER_EMAIL_BLACKLIST && BLOCKED_EMAIL_SUFFIXES != '') {
 			$this->enabled = true;
-			$this->mailSuffixRegex = '!^(.*'.implode('|.*', explode("\n", str_replace("\r", '', preg_quote(BLOCKED_EMAIL_SUFFIXES)))).')$!i';
+			$blockedEmailSuffixex = explode("\n", preg_quote(StringUtil::unifyNewlines(StringUtil::trim(BLOCKED_EMAIL_SUFFIXES))));
+			$blockedEmailSuffixex = array_filter($blockedEmailSuffixex);
+			$this->mailSuffixRegex = '!^(.*'.implode('|.*', $blockedEmailSuffixex).')$!i';
 		}
 	}
 
